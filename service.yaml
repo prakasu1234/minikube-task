@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dadjokes-service
+  namespace: sre-techtask
+spec:
+  selector:
+    app: dadjokes
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8100
+  type: NodePort
